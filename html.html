@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For you, Charles.</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .login-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-box input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .login-box button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .content-container {
+            display: none; /* Hide content by default */
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header img {
+            height: 30px;
+        }
+
+        .header button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .header-image {
+            width: 100%; /* Make header image span full width */
+            max-height: 300px; /* Adjust as needed */
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
+        }
+
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto; /* Center avatar */
+            display: block; /* Ensure it's a block element */
+        }
+
+        .bio {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .post {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .post img, .post video {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .post p {
+            margin-bottom: 10px;
+        }
+
+        .post .reblogged {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .post .notes {
+            font-size: 12px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        .post .icons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .post .icons button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .tumblr-promo {
+            background-color: #eee;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .tumblr-promo button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <div class="login-box">
+            <h2>Enter Password</h2>
+            <input type="password" id="passwordInput" placeholder="Password">
+            <button onclick="checkPassword()">Login</button>
+        </div>
+    </div>
+
+    <div class="content-container" id="contentContainer">
+        <div class="header">
+            <button>☰</button>
+            <img src="free-tumblr-logo-icon-2434-thumb.png" alt="Tumblr Logo">
+            <button>Open app</button>
+        </div>
+
+        <img src="images (2).jpeg " alt="Header Picture" class="header-image">
+
+        <div class="profile">
+            <img src="MEITU_20250321_202629163.jpg" alt="My Avatar" class="avatar">
+            <div class="bio">
+                <p>Where melodies and verses become my voice. In this space, I weave the threads of my heart's most profound feelings, a proof of my love for Charles, the only one who feels like home.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>Ask Me Questions</h2>
+            <p>Q: What makes Charles different from the people you've talked to and dated before?</p>
+            <p>A: Charles is incredibly honest and transparent.That's something I've been searching for for a long time. With others, there were always games or hidden intentions. He''s just genuinely himself, and that's refreshing.</p>
+            <p>Q: When did you realize that Charles is the type of person you couldn't find twice?</p>
+            <p>A: I realized it when I found out that Charles wanted nothing more than to be loved and be accepted. He shows real authenticity and vulnerability, and isn't afraid to be a 'softie.' He also wants a serious relationship, which is exactly what I'm looking for. It's rare to find someone who's so open and genuine. It felt like I finally found a person who wanted the same things that I did.</p>
+        </div>
+
+        <div class="post">
+            <div class="reblogged">kaye reblogged songlyrics</div>
+            <p>And your skin, oh yeah, your skin and bones. Turn into something beautiful. And you know, for you, I'd bleed myself dry.For you, I'd bleed myself dry</p>
+            <p>- Yellow//Coldplay</p>
+            <div class="notes">19,934 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>
+        </div>
+
+        <div class="post">
+            <p>"It's not going to be easy. It's going to be really hard. We're going to have to work at this every day, but I want to do that, because I want you. I want all of you, forever, you and me, everyday"</p>
+            <p>- Noah//The Notebook</p>
+            <div class="notes">3,481 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>
+        </div>
+        
+        <div class="post">
+            <div class="post-content">Kaye posted a pic</div>   
+                <img src="FB_IMG_1742557840720.jpg">
+                <p>Mine!!! Sarap mo here HAHAHAHAHA</p>
+                <div class="notes">81 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>
+        </div>
+
+<div class="post">
+            <div class="post-content">Kaye posted a pic</div>
+                <img src="FB_IMG_1742557826411.jpg" alt="Mine!!! Sarap mo here babi HAHAHAHA">
+                <p> Mahal na mahal ko to sobra. Hinding hindi na kita papakawalan, Babi.</p>
+                <div class="notes">64 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>
+        </div>
+
+<div class="post">
+            <div class="post-content">Kaye posted a pic </div>
+                <img src="FB_IMG_1742557828673.jpg">
+                <p> Ilysm! feflex kita palagi.</p>
+              <div class="notes">12 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button> 
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-content"> Kaye posted a Video</div>
+                <video controls>
+                    <source src="ssstik.io_@tonyolsenfilm_1740350175954.mp4"> type="video/mp4">                                           
+                </video>
+               <p>Could be us, Babi.</p>
+                 <div class="notes">1,299 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button> 
+                  
+            </div>
+        </div>
+
+<div class="post">
+            <div class="post-content">Kaye posted a Video</div>
+                <video controls>
+                    <source src="ssstik.io_@bossxvlog_1742558043449.mp4" type="video/mp4">      
+                </video>
+                 <p>Sayo lang palagi</p>
+                   
+                   <div class="notes">3,862 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>
+        </div>
+
+<div class="post">
+            <div class="post-content">Kaye posted a Video</div>
+                <video controls>
+                    <source src="ssstik.io_@cheexzypuff_1742558089418.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p> Palagi ako naka suporta sayo kahit anong mangyari. Andito lang ako palagi. </p>
+                   
+                   <div class="notes">11 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>
+        </div>
+
+<div class="post">
+            <div class="post-content">Kaye posted a Video</div>
+                <video controls>
+                    <source src=" ssstik.io_@elinabrolina_1740262416810.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p> Kahit kelan hinding hindi kita makakalimutan"</p>
+                   
+                   <div class="notes">864 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>
+        </div>
+
+<div class="post">
+            <div class="post-content">
+                <p>Kaye posted a Video (tumblr style)</p>
+                <video controls>
+                    <source src="ssstik.io_@prollynoth_0_1742558251071.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>"Payakap ako ah? "</p>
+                   
+                   <div class="notes">3,862 notes</div>
+            <div class="icons">
+                <button>Share</button>
+                <button>Reblog</button>
+                <button>Like</button>
+            </div>                
+   
+     <div class="tumblr-promo">
+            <p>Join over 100 million people using iloveyoucharles to find their communities and make friends.</p>
+            <button>Sign up</button>
+            <button>Log in</button>
+        </div>
+       
+<p> Ikaw lang baby ko.<sup id="footnote-ref-">1</sup></p>
+
+<div class="footnote">
+  <ol>
+    <li id="footnote-1">I love you very much, Charlie. Sana palagi natin piliin ayusin yung mga arguments and misunderstandings. Sana piliin din natin palagi ang isat isa.</li>
+  </ol>
+</div>
+
+<style>
+.footnote {
+  font-size: 0.8em;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+</style>
+
+    <script>
+        const password = "march112025"; // Change this to your desired password
+
+        function checkPassword() {
+            const input = document.getElementById("passwordInput").value;
+            if (input === password) {
+                document.getElementById("loginContainer").style.display = "none";
+                document.getElementById("contentContainer").style.display = "block";
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+    </script>
+</body>
+</html>
